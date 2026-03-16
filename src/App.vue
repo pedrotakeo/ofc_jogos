@@ -3,17 +3,18 @@
 
 <template>
 
-  <div class="fixed right-0 top-0 bg-black h-25 md w-screen z-100">
-    <div class="w-[full] h-full flex flex-row justify-between items-center text-white">
+  <div class="fixed right-0 top-0 bg-[#f2ebe6] h-auto py-5 md w-screen z-100">
+    <div class="w-[full] h-full flex flex-row justify-between items-center text-[#c54c2b] ">
       <div class="pl-10 flex flex-col justify-center items-center">
-        <span class="text-3xl">C.A.J.U.</span>
-          <span class="text-xs">Clube Acadêmico de Jogos UFPR</span>
+
+        <img :src="logo" alt="logo" class="w-30 relative "/>
+
 
       </div>
       <div class="pr-10">
 
 
-        <nav class="text-white p-4 z-100 text-md">
+        <nav class="text-[#c54c2b] p-4 z-100 text-md">
 
           <!--tela maior-->
           <div class="container mx-auto flex justify-between items-center">
@@ -31,8 +32,8 @@
 
           <div class="md:hidden">
             <button @click="isOpen = !isOpen" class="focus:outline-none">
-              <svg class="h-6 w-6" viewBox="0 0 24 24">
-                <path d="M4 6h16M4 12h16M4 18h16" stroke="white" stroke-width="2" stroke-linecap="round"/>
+              <svg class="h-8 w-8" viewBox="0 0 20 20">
+                <path d="M4 6h16M4 12h16M4 18h16" stroke="#c54c2b" stroke-width="2" stroke-linecap="round"/>
               </svg>
             </button>
           </div>
@@ -47,7 +48,7 @@
           >
 
             <div v-if="isOpen"
-                class="md:hidden absolute left-0 right-0 top-full mt-2 mx-4 bg-black/80 rounded-b-2xl z-50 overflow-hidden">
+                class="md:hidden absolute left-0 right-0 top-full mt-2 mx-4 bg-[#f2ebe6]/80 rounded-b-2xl z-50 overflow-hidden">
 
               <div class="flex flex-col p-4 space-y-2 justify-center items-center w-full">
                 <RouterLink to="/home" @click="isOpen = false" class="block hover:bg-white/10 p-3 rounded-xl transition-all">Home</RouterLink>
@@ -67,13 +68,13 @@
       </div>
     </div>
   </div>
-  <div class="pt-25">
+  <div class="pt-28 bg-[#f2ebe6] text-[#c54c2b]">
 
 
   <RouterView /></div>
 
 
-  <div class="h-auto py-20 bg-[black] flex flex-row justify-center items-center">
+  <div class="h-auto py-20 flex flex-row justify-center items-center">
 
     <div class="p-3 flex flex-col" >
       <RouterLink to="/contact" class="rounded-xl hover:scale-110 transition ease-linear pl-4">Info1</RouterLink>
@@ -94,12 +95,14 @@
 </template>
 
 <script setup>
+import logo from '@/assets/png_logo_red.png'
 import { ref } from 'vue'
 
 const isOpen = ref(false)
 </script>
 
 <style scoped>
+
 
 
 </style>

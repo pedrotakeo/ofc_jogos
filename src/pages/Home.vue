@@ -1,6 +1,6 @@
 
 <template>
-  <div class="min-h-[80vh] w-screen p-0 m-0 flex flex-col justify-start items-center text-white">
+  <div class="min-h-[80vh] w-screen p-0 m-0 flex flex-col justify-start items-center">
 
     <div class="h-100 w-full bg-white">
       <img
@@ -13,14 +13,14 @@
 
     <div class="pt-10 w-full flex flex-col justify-center items-center px-10">
       <div class="text-2xl text-center">LOREM IPSUM</div>
-      <div class="text-md py-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra ullamcorper magna lacinia aliquet. Nullam elit lorem, ornare sit amet ultricies at, ornare sollicitudin nulla. Phasellus tempor urna massa, ac lobortis tellus gravida at. In imperdiet varius nunc, vitae efficitur leo viverra id. Donec fringilla et nibh sed eleifend. Sed dapibus condimentum elit. Ut est tortor, eleifend in vehicula nec, ultricies sit amet erat. Nullam vel risus lacus. Sed vehicula dui et lacus pulvinar vestibulum. Nullam tristique mi et nulla aliquet interdum. Quisque tincidunt sit amet nisl nec ullamcorper. Donec rutrum consequat augue sit amet tristique. Aliquam a neque sit amet ipsum sodales finibus non dapibus nisi. Fusce pellentesque consequat massa eu pretium. Donec faucibus metus ipsum, at tincidunt lectus commodo in. Morbi sagittis felis fringilla nisi consequat aliquet.</div>
+      <div class="text-md py-5 text-black/70">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra ullamcorper magna lacinia aliquet. Nullam elit lorem, ornare sit amet ultricies at, ornare sollicitudin nulla. Phasellus tempor urna massa, ac lobortis tellus gravida at. In imperdiet varius nunc, vitae efficitur leo viverra id. Donec fringilla et nibh sed eleifend. Sed dapibus condimentum elit. Ut est tortor, eleifend in vehicula nec, ultricies sit amet erat. Nullam vel risus lacus. Sed vehicula dui et lacus pulvinar vestibulum. Nullam tristique mi et nulla aliquet interdum. Quisque tincidunt sit amet nisl nec ullamcorper. Donec rutrum consequat augue sit amet tristique. Aliquam a neque sit amet ipsum sodales finibus non dapibus nisi. Fusce pellentesque consequat massa eu pretium. Donec faucibus metus ipsum, at tincidunt lectus commodo in. Morbi sagittis felis fringilla nisi consequat aliquet.</div>
     </div>
 
 
     <div class="text-2xl text-center pt-10 pb-5">Jogos Criados Por Nossos Membros</div>
 
     <!--CAROUSEL-->
-    <div class="carousel w-[70vw] xl:w-[30vw] ">
+    <div class="relative carousel w-[70vw] xl:w-[30vw] ">
       <div class="inner" ref="inner" :style="innerStyles">
         <div class="card rounded-xl w-[70vw]  xl:w-[30vw] overflow-hidden " v-for="card in cards" :key="card">
           <img
@@ -31,13 +31,14 @@
 
         </div>
       </div>
+      <button @click="prev" class=" absolute left-4 top-1/2 -translate-y-1/2 z-10 car-btn w-10 h-10 bg-[#c54c2b] text-white p-2 rounded-full"><</button>
+      <button @click="next" class=" absolute right-4 top-1/2 -translate-y-1/2 z-10 car-btn w-10 h-10 bg-[#c54c2b] text-white p-2 rounded-full">></button>
 
     </div>
 
-    <div class="flex gap-2 mt-4 pb-20">
-      <button @click="prev" class="car-btn w-10 h-10  p-2 rounded-full"><</button>
-      <button @click="next" class="car-btn w-10 h-10  p-2 rounded-full">></button>
-    </div>
+
+
+
   </div>
 </template>
 
@@ -183,9 +184,6 @@ export default {
 
 
 .car-btn {
-  margin-right: 5px !important;
-  margin-top: 10px !important;
-  box-shadow: inset 0px 0px 13px #ffffff;
   transition: 0.2s;
 }
 
@@ -194,11 +192,5 @@ export default {
 }
 
 
-
-.head-image{
-
-  filter: brightness(70%);
-
-}
 
 </style>
