@@ -6,8 +6,9 @@
   <div class="fixed right-0 top-0 bg-black h-25 md w-screen z-100">
     <div class="w-[full] h-full flex flex-row justify-between items-center text-white">
       <div class="pl-10 flex flex-col justify-center items-center">
-          <span class="text-">Oficina de</span>
-          <span class="text-xl">JOGOS UFPR</span>
+        <span class="text-3xl">C.A.J.U.</span>
+          <span class="text-xs">Clube Acadêmico de Jogos UFPR</span>
+
       </div>
       <div class="pr-10">
 
@@ -20,9 +21,9 @@
 
             <div class="hidden md:flex">
               <RouterLink to="/home" class="rounded-xl hover:scale-110 transition ease-linear pl-4">Home</RouterLink>
-              <RouterLink to="/about" class="rounded-xl hover:scale-110 transition ease-linear pl-4">Projetos</RouterLink>
-              <RouterLink to="/contact" class="rounded-xl hover:scale-110 transition ease-linear pl-4">Membros</RouterLink>
-              <RouterLink to="/contact" class="rounded-xl hover:scale-110 transition ease-linear pl-4">Inscrição</RouterLink>
+              <RouterLink to="/projetos" class="rounded-xl hover:scale-110 transition ease-linear pl-4">Projetos</RouterLink>
+              <RouterLink to="/membros" class="rounded-xl hover:scale-110 transition ease-linear pl-4">Membros</RouterLink>
+              <RouterLink to="/inscricao" class="rounded-xl hover:scale-110 transition ease-linear pl-4">Inscrição</RouterLink>
             </div>
           </div>
 
@@ -50,9 +51,9 @@
 
               <div class="flex flex-col p-4 space-y-2 justify-center items-center w-full">
                 <RouterLink to="/home" @click="isOpen = false" class="block hover:bg-white/10 p-3 rounded-xl transition-all">Home</RouterLink>
-                <RouterLink to="/about" @click="isOpen = false" class="block hover:bg-white/10 p-3 rounded-xl transition-all">Projetos</RouterLink>
-                <RouterLink to="/contact" @click="isOpen = false" class="block hover:bg-white/10 p-3 rounded-xl transition-all">Membros</RouterLink>
-                <RouterLink to="/contact" @click="isOpen = false" class="block hover:bg-white/10 p-3 rounded-xl transition-all">Inscrição</RouterLink>
+                <RouterLink to="/projetos" @click="isOpen = false" class="block hover:bg-white/10 p-3 rounded-xl transition-all">Projetos</RouterLink>
+                <RouterLink to="/membros" @click="isOpen = false" class="block hover:bg-white/10 p-3 rounded-xl transition-all">Membros</RouterLink>
+                <RouterLink to="/inscricao" @click="isOpen = false" class="block hover:bg-white/10 p-3 rounded-xl transition-all">Inscrição</RouterLink>
               </div>
             </div>
 
