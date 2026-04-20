@@ -1,13 +1,13 @@
 <template>
-  <div>
+  <div class="min-h-screen bg-[#2B2725]">
     <RouterView />
   </div>
 </template>
 
-<script setup>
-import { ref } from 'vue'
-
-const isOpen = ref(false)
+<script setup lang="ts">
+// Global configurations or state can go here
 </script>
 
-<style scoped></style>
+<style>
+/* Global styles can stay in main.css or here */
+</style>

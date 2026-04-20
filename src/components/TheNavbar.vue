@@ -10,7 +10,7 @@
       </div>
 
       <!-- Mobile Menu Button -->
-      <button @click="isOpen = !isOpen" class="md:hidden p-2 focus:outline-none" aria-label="Toggle Menu">
+      <button @click="toggleMenu" class="md:hidden p-2 focus:outline-none" aria-label="Toggle Menu">
         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path v-if="!isOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
           <path v-else stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -30,7 +30,7 @@
       <div v-if="isOpen" class="md:hidden absolute left-0 right-0 top-full mt-2 bg-black/90 rounded-2xl overflow-hidden shadow-xl">
         <div class="flex flex-col p-4">
           <RouterLink v-for="link in links" :key="link.path" :to="link.path" 
-            @click="isOpen = false"
+            @click="closeMenu"
             class="p-3 text-white hover:bg-white/10 rounded-xl transition-colors">
             {{ link.label }}
           </RouterLink>
@@ -41,12 +41,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { useNavbar } from '@/composables/useNavbar';
 
-const isOpen = ref(false);
-const links = [
-  { label: 'Projetos', path: '/projetos' },
-  { label: 'Membros', path: '/membros' },
-  { label: 'Inscrição', path: '/inscricao' },
-];
+const { isOpen, toggleMenu, closeMenu, links } = useNavbar();
 </script>

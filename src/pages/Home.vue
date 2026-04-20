@@ -23,11 +23,12 @@
         src="../assets/home/arrow-down.png"
         class="absolute bottom-10 z-10 h-10 brightness-0 invert animate-jump cursor-pointer"
         alt="Scroll Down"
+        @click="scrollToContent"
       />
     </header>
 
     <!-- Content Sections -->
-    <main class="flex flex-col items-center py-20 gap-20">
+    <main ref="contentStart" class="flex flex-col items-center py-20 gap-20">
       <InfoSection title="Desenvolva Jogos!" titleColor="#D7826D">
         <p>
           O Clube Acadêmico de Jogos UFPR (CAJU) é grupo de desenvolvimento de jogos, formados
@@ -62,6 +63,9 @@
 <script setup lang="ts">
 import TheNavbar from '@/components/TheNavbar.vue';
 import InfoSection from '@/components/InfoSection.vue';
+import { useHome } from '@/composables/useHome';
+
+const { contentStart, scrollToContent } = useHome();
 </script>
 
 <style scoped>
