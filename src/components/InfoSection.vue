@@ -1,21 +1,20 @@
 <template>
   <section
-    :class="[
-      'w-[90%] md:w-[70%] h-auto flex flex-col md:flex-row justify-between items-center bg-[#1a1715] p-10 md:p-20 rounded-xl gap-10 transition-all duration-300',
-      reverse ? 'md:flex-row-reverse' : ''
-    ]"
+    class="w-full flex flex-col md:flex-row justify-end items-start py-32 px-6 md:px-12 lg:px-24 gap-10 md:gap-20 transition-all duration-300"
   >
-    <h2
-      :style="{ color: titleColor }"
-      class="w-full md:w-[30%] text-4xl md:text-5xl text-center font-bold leading-tight font-rodin"
-    >
-      {{ title }}
-    </h2>
+    <!-- Título: Menor e com margem da esquerda (vácuo entre nav e título) -->
+    <div class="w-full md:w-[30%] lg:w-[25%] md:ml-20">
+      <h2
+        :style="{ color: titleColor }"
+        class="text-4xl md:text-5xl lg:text-6xl text-left font-bold leading-tight font-rodin break-words opacity-90"
+      >
+        {{ title }}
+      </h2>
+    </div>
+
+    <!-- Texto: Bem mais próximo da borda direita -->
     <div
-      :class="[
-        'w-full md:w-[60%] text-white text-lg md:text-xl flex flex-col gap-4 font-cezanne',
-        reverse ? 'md:text-end items-end' : 'md:text-start items-start'
-      ]"
+      class="w-full md:w-[50%] lg:w-[45%] text-white text-lg md:text-xl flex flex-col gap-8 font-cezanne leading-relaxed text-justify"
     >
       <slot></slot>
     </div>
@@ -26,6 +25,5 @@
 defineProps<{
   title: string;
   titleColor?: string;
-  reverse?: boolean;
 }>();
 </script>
