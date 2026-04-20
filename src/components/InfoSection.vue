@@ -7,13 +7,13 @@
   >
     <h2
       :style="{ color: titleColor }"
-      class="w-full md:w-[30%] text-4xl md:text-5xl text-center font-bold leading-tight"
+      class="w-full md:w-[30%] text-4xl md:text-5xl text-center font-bold leading-tight font-rodin"
     >
       {{ title }}
     </h2>
     <div
       :class="[
-        'w-full md:w-[60%] text-white text-lg md:text-xl flex flex-col gap-4',
+        'w-full md:w-[60%] text-white text-lg md:text-xl flex flex-col gap-4 font-cezanne',
         reverse ? 'md:text-end items-end' : 'md:text-start items-start'
       ]"
     >

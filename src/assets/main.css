@@ -1,17 +1,50 @@
 @import './base.css';
 @import "tailwindcss";
 
-@font-face{
-    font-family: nint;
-    src: url('./FOT-NewRodin.otf');
+@font-face {
+    font-family: 'NewRodin';
+    src: url('../fonts/FOT-NewRodin Pro M.otf') format('opentype'),
+         url('../fonts/FOT-NewRodin.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NewCezanne';
+    src: url('../fonts/FOT-NewCezanne Pro M.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NewCezanne';
+    src: url('../fonts/FOT-NewCezanne Pro EB.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@theme {
+  --font-cezanne: "NewCezanne", ui-sans-serif, system-ui;
+  --font-rodin: "NewRodin", ui-serif, Georgia;
 }
 
 #app {
   margin: 0 auto;
-  font-weight: normal;
-  font-family: nint;
+  font-family: var(--font-cezanne);
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Define que todos os headers usem a NewRodin por padrão */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-rodin);
+  font-weight: 700;
+  -webkit-text-stroke: 0.5px currentColor; /* Simula um peso maior sem perder a forma */
+  letter-spacing: -0.01em; /* Ajusta o espaçamento para compensar a grossura */
 }
 
 .green {
@@ -21,15 +54,8 @@
   padding: 3px;
 }
 
-
 @media (min-width: 1024px) {
   body {
     display: block;
-
-  }
-
-  #app {
-    display: block;
-    /* grid-template-columns: 1fr 1fr; */
   }
 }
