@@ -70,6 +70,18 @@
             projeto da CAJU foi criado pelo professor Guilherme A. Derenievicz, com o intuito
             inicial de começar um projeto universitário com o foco no desenvolvimento de jogos.
           </p>
+
+          <div class="w-full h-80 my-10 rounded-3xl overflow-hidden shadow-2xl border-4 border-[#BDD866]/20 group transition-all duration-500 hover:border-[#BDD866]/50">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3602.635344059493!2d-49.234306826368154!3d-25.450452133697897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce510c13f4c49%3A0xdd5fbed9fe690672!2sDepartamento%20de%20Inform%C3%A1tica%20-%20UFPR!5e0!3m2!1spt-BR!2sbr!4v1777506596960!5m2!1spt-BR!2sbr"
+              class="w-full h-full border-0 grayscale invert-[0.1] contrast-[1.1] transition-all duration-700 group-hover:grayscale-0 group-hover:invert-0 group-hover:contrast-100"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            >
+            </iframe>
+          </div>
+
           <p>
             O projeto se estende para além da universidade, promovendo conhecimento por meio de
             palestras, video aulas e oferecimento de jogos gratuitos.
